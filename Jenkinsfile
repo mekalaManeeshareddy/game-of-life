@@ -14,6 +14,7 @@ pipeline {
                 sh 'mvn package'
             }
         }
+        }
         stage('post build') {
             steps {
                 archiveArtifacts artifacts: '**/target/gameoflife.war',
