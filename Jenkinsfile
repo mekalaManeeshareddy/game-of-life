@@ -1,9 +1,5 @@
 pipeline {
     agent { label 'MAVEN_JDK8' }
-    triggers { cron ('H/15 * * * *') }
-    parameters { 
-        string(name: 'MAVEN_GOAL' , defaultvalue: 'package' , description: 'MAVEN_GOAL')
-    }
     stages {
         stage('vcs') {
             steps {
