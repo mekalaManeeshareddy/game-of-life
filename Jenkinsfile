@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('vcs') {
             steps {
-                git url: 'https://github.com/mekalaManeeshareddy/game-of-life.git,
+                git url: 'https://github.com/mekalaManeeshareddy/game-of-life.git
                     branch: 'declarative'
             }
         }
