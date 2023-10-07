@@ -1,6 +1,6 @@
 pool:
   vmImage: 'ubuntu-latest'
-  name: 'azure-pipelines'
+  name: 'Azure Pipelines'
 steps:
 - task: Maven@4
   inputs:
