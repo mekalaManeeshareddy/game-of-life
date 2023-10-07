@@ -9,3 +9,14 @@ steps:
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
+- task: CopyFiles@2
+  inputs:
+    Contents: '**/target/*.war'
+    TargetFolder: $(Build.ArtifactStagingDirectory)
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'gol'
+    publishLocation: 'Container'
+
+  
